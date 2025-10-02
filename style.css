@@ -1,0 +1,14 @@
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #23243a; color: #f4f4f4; margin: 0; }
+header, footer { background: #1b1c29; padding: 16px; text-align: center; }
+header h1 { margin: 0; font-size: 2em; }
+main { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; padding: 16px; }
+section { background: #2c2d4e; border-radius: 12px; padding: 16px; min-width: 300px; box-shadow: 0 2px 12px #0003; }
+#skill-trees { flex: 2 1 300px; }
+#xp-log, #buffs { flex: 1 1 300px; }
+button { background: #3282ff; color: white; border: none; border-radius: 6px; padding: 8px 16px; cursor: pointer; }
+button:hover { background: #155ecb; }
+select, input { border-radius: 5px; padding: 6px; border: none; }
+.skill-bar { background: #474879; border-radius: 6px; margin: 6px 0; position: relative; height: 24px; }
+.skill-level { background: #37e49e; height: 100%; border-radius: 6px; transition: width 0.3s; }
+.skill-label { position: absolute; left: 10px; top: 3px; color: #fff; }
+@media (max-width: 800px) { main { flex-direction: column; } }
