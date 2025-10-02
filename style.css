@@ -1,1 +1,22 @@
-Not Found
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 body \{ font-family: 'Segoe UI', Arial, sans-serif; background: #23243a; color: #f4f4f4; margin: 0; \}\
+header, footer \{ background: #1b1c29; padding: 16px; text-align: center; \}\
+header h1 \{ margin: 0; font-size: 2em; \}\
+main \{ display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; padding: 16px; \}\
+section \{ background: #2c2d4e; border-radius: 12px; padding: 16px; min-width: 300px; box-shadow: 0 2px 12px #0003; \}\
+#skill-trees \{ flex: 2 1 300px; \}\
+#xp-log, #buffs \{ flex: 1 1 300px; \}\
+button \{ background: #3282ff; color: white; border: none; border-radius: 6px; padding: 8px 16px; cursor: pointer; \}\
+button:hover \{ background: #155ecb; \}\
+select, input \{ border-radius: 5px; padding: 6px; border: none; \}\
+.skill-bar \{ background: #474879; border-radius: 6px; margin: 6px 0; position: relative; height: 24px; \}\
+.skill-level \{ background: #37e49e; height: 100%; border-radius: 6px; transition: width 0.3s; \}\
+.skill-label \{ position: absolute; left: 10px; top: 3px; color: #fff; \}\
+@media (max-width: 800px) \{ main \{ flex-direction: column; \} \}\
+}
