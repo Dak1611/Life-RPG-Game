@@ -9,29 +9,77 @@
   <header>
     <h1>Life RPG: Skill Quest</h1>
     <div id="stats"></div>
+    <nav class="main-nav">
+      <button id="nav-skills" class="nav-btn active">Skills</button>
+      <button id="nav-quests" class="nav-btn">Quests</button>
+      <button id="nav-character" class="nav-btn">Character Sheet</button>
+    </nav>
   </header>
   <main>
-    <section id="skill-trees">
-      <!-- Skill trees will be auto-generated here -->
-    </section>
-    <section id="xp-log">
-      <h2>Log XP</h2>
-      <form id="xpForm">
-        <select id="skillSelect"></select>
-        <select id="xpType">
-          <option value="focus">Focus Session (10 XP)</option>
-          <option value="quick">Quick Task (5 XP)</option>
-          <option value="major">Major Achievement (100 XP)</option>
-        </select>
-        <button type="submit">Add XP</button>
-      </form>
-    </section>
-    <section id="buffs">
-      <h2>Buffs & Debuffs</h2>
-      <div id="buffList"></div>
-    </section>
+    <!-- Skills View -->
+    <div id="view-skills" class="view active">
+      <section id="skill-trees">
+        <!-- Skill trees will be auto-generated here -->
+      </section>
+      <section id="xp-log">
+        <h2>Log XP</h2>
+        <form id="xpForm">
+          <select id="skillSelect"></select>
+          <select id="xpType">
+            <option value="focus">Focus Session (10 XP)</option>
+            <option value="quick">Quick Task (5 XP)</option>
+            <option value="major">Major Achievement (100 XP)</option>
+          </select>
+          <button type="submit">Add XP</button>
+        </form>
+      </section>
+      <section id="buffs">
+        <h2>Buffs & Debuffs</h2>
+        <div id="buffList"></div>
+      </section>
+    </div>
+
+    <!-- Quests View -->
+    <div id="view-quests" class="view">
+      <section id="main-quests">
+        <h2>Main Quests</h2>
+        <div id="mainQuestList"></div>
+        <button id="addMainQuest">+ Add Main Quest</button>
+      </section>
+      <section id="side-quests">
+        <h2>Side Quests</h2>
+        <div id="sideQuestList"></div>
+        <button id="addSideQuest">+ Add Side Quest</button>
+      </section>
+    </div>
+
+    <!-- Character Sheet View -->
+    <div id="view-character" class="view">
+      <section id="character-overview">
+        <h2>Character Overview</h2>
+        <div id="characterStats"></div>
+      </section>
+      <section id="skill-progress">
+        <h2>Skill Progress Summary</h2>
+        <div id="skillSummary"></div>
+      </section>
+      <section id="active-buffs-debuffs">
+        <h2>Active Buffs & Debuffs</h2>
+        <div id="characterBuffs"></div>
+      </section>
+      <section id="quest-status">
+        <h2>Quest Status</h2>
+        <div id="characterQuests"></div>
+      </section>
+      <section id="perks-achievements">
+        <h2>Perks & Achievements</h2>
+        <div id="perksList"></div>
+      </section>
+    </div>
   </main>
-  <footer>Progress saves automatically in your browser.</footer>
+  <footer>
+    Progress saves automatically in your browser.
+  </footer>
   <script src="app.js"></script>
 </body>
 </html>
