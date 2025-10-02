@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Life RPG Browser Game</title>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <h1>Life RPG: Skill Quest</h1>
+    <div id="stats"></div>
+  </header>
+  <main>
+    <section id="skill-trees">
+      <!-- Skill trees will be auto-generated here -->
+    </section>
+    <section id="xp-log">
+      <h2>Log XP</h2>
+      <form id="xpForm">
+        <select id="skillSelect"></select>
+        <select id="xpType">
+          <option value="focus">Focus Session (10 XP)</option>
+          <option value="quick">Quick Task (5 XP)</option>
+          <option value="major">Major Achievement (100 XP)</option>
+        </select>
+        <button type="submit">Add XP</button>
+      </form>
+    </section>
+    <section id="buffs">
+      <h2>Buffs & Debuffs</h2>
+      <div id="buffList"></div>
+    </section>
+  </main>
+  <footer>Progress saves automatically in your browser.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
