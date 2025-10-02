@@ -9,15 +9,12 @@ const skillData = {
   "Exploration & Play 🌍": ["Gaming", "Side Quests", "Owning Stuff", "Eating Things", "Technology"]
 };
 
-// --- Load or Initialize Save ---
 let save = JSON.parse(localStorage.getItem('lifeRPG')) || { xp: {}, buffs: [] };
 
-// Ensure skills exist
 Object.values(skillData).flat().forEach(s => {
   if (!save.xp[s]) save.xp[s] = 0;
 });
 
-// --- Render Skill Trees ---
 function renderSkills() {
   const skillTrees = document.getElementById('skill-trees');
   skillTrees.innerHTML = '';
@@ -37,7 +34,6 @@ function renderSkills() {
   });
 }
 
-// --- XP Logging Form ---
 function setupForm() {
   const skillSelect = document.getElementById('skillSelect');
   Object.values(skillData).flat().forEach(skill => {
@@ -54,7 +50,6 @@ function setupForm() {
     let amt = type === 'focus' ? 10 : type === 'quick' ? 5 : 100;
     save.xp[skill] += amt;
 
-    // Buff sample (random encounter)
     if (Math.random() < 0.15) {
       let buff = { text: skill + " Inspiration!", xp: 20, expires: Date.now() + 86400000 };
       save.buffs.push(buff);
@@ -69,7 +64,6 @@ function setupForm() {
   };
 }
 
-// --- Render Buffs/Debuffs ---
 function renderBuffs() {
   const buffDiv = document.getElementById('buffList');
   buffDiv.innerHTML = '';
@@ -80,14 +74,12 @@ function renderBuffs() {
   localStorage.setItem('lifeRPG', JSON.stringify(save));
 }
 
-// --- Stats/Profile ---
 function renderStats() {
   const statsDiv = document.getElementById('stats');
   let totalXP = Object.values(save.xp).reduce((a, b) => a + b, 0);
   statsDiv.innerHTML = `<strong>Total XP: ${totalXP}</strong> | Achievements: N/A | Buffs Active: ${save.buffs.length}`;
 }
 
-// --- Init ---
 renderSkills();
 setupForm();
 renderBuffs();
